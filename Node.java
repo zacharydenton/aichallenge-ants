@@ -38,6 +38,20 @@ class Node {
 		return path;
 	}
 
+	public static Node reverse(Node node) {
+		if (node == null) {
+			return null;
+		}
+		if (node.parent == null) {
+			return node;
+		}
+		Node second = node.parent;
+		node.parent = null;
+		Node reverseRest = Node.reverse(second);
+		second.parent = node;
+		return reverseRest;
+	}
+
 	public Set<Tile> getNeighbors() {
 		HashSet<Tile> neighbors = new HashSet<Tile>();
 		for (Aim aim : new Aim[]{Aim.NORTH, Aim.SOUTH, Aim.EAST, Aim.WEST}) {
