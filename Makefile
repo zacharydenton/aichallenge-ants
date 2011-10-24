@@ -7,6 +7,7 @@ CLASSES=$(SOURCES:%.java=%.class)
 .PHONY: all clean
 
 all: $(CLASSES)
+	javac *.java
 	jar cvfm MyBot.jar Manifest.txt $(CLASSES)
 
 %.class: %.java

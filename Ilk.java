@@ -38,4 +38,8 @@ public enum Ilk {
     public boolean isUnoccupied() {
         return this == LAND || this == DEAD;
     }
+
+    public boolean isTakable() {
+        return this == FOOD || this == ENEMY_ANT;
+    }
 }
