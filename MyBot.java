@@ -19,6 +19,7 @@ public class MyBot extends Bot {
     }
 
     private HashSet<Tile> unseen;
+    private ArrayList<ArrayList<Node>> nodeGrid;
     public ArrayList<Ant> myAnts;
 
     public void setup(int loadTime, int turnTime, int rows, 
@@ -39,24 +40,123 @@ public class MyBot extends Bot {
         myAnts = new ArrayList<Ant>();
     }
 
-    public Set<Tile> getRandomExplorationTargets(Ants ants, int numTargets) {
-        HashSet<Tile> targets = new HashSet<Tile>();
-        for (int i = 0; i < numTargets; i++) {
-            int row = (int)(Math.random() * (ants.getRows() + 1));
-            int col = (int)(Math.random() * (ants.getCols() + 1));
-            Tile target = new Tile(row, col);
-            while (!unseen.contains(target)) {
-                row = (int)(Math.random() * (ants.getRows() + 1));
-                col = (int)(Math.random() * (ants.getCols() + 1));
-                target = new Tile(row, col);
+    private void generateNodeGrid() {
+        nodeGrid = new ArrayList<ArrayList<Node>>();
+        for (int row = 0; row < getAnts().getRows(); row++) {
+            nodeGrid.add(new ArrayList<Node>());
+            for (int col = 0; col < getAnts().getCols(); col++) {
+                Tile position = new Tile(row, col);
+                Ilk ilk = getAnts().getIlk(position);
+                boolean walkable = ilk.isPassable() && !getAnts().getMyHills().contains(position) && !Ant.reserved.contains(position);
+                nodeGrid.get(row).add(new Node(position, walkable, null));
             }
-            targets.add(target);
         }
-        return targets;
+    }
+
+    private void resetNodeGrid() {
+        for (ArrayList<Node> nodeArray : nodeGrid) {
+            for (Node node : nodeArray) {
+                node.parent = null;
+            }
+        }
+    }
+
+    private void clearNodeGrid() {
+        this.nodeGrid = null;
+    }
+
+    public LinkedList<Tile> findPath(Tile start, Tile finish) {
+        if (this.nodeGrid == null) {
+            generateNodeGrid();
+        } else {
+            resetNodeGrid();
+        }
+
+        Logger.getAnonymousLogger().warning("finding path from " + start + " to " + finish);
+
+        PriorityQueue<Node> frontierQueue = new PriorityQueue<Node>(1, new Comparator<Node>() {
+            public int compare(Node a, Node b) {
+                return a.length() - b.length();
+            }
+        });
+        frontierQueue.add(nodeGrid.get(start.getRow()).get(start.getCol()));
+        HashSet<Node> frontierSet = new HashSet<Node>(frontierQueue);
+        HashSet<Node> exploredSet = new HashSet<Node>();
+        List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
+
+
+        while (frontierQueue.size() > 0) {
+            Node path = frontierQueue.poll();
+            frontierSet.remove(path);
+            exploredSet.add(path);
+
+            if (path.position.equals(finish)) {
+                Logger.getAnonymousLogger().warning("found a path: " + path.retracePath());
+                return path.retracePath();
+            }
+
+            for (Aim direction : directions) {
+                Tile neighborTile = getAnts().getTile(path.position, direction);
+                Node neighbor = nodeGrid.get(neighborTile.getRow()).get(neighborTile.getCol());
+                if (neighbor.walkable) {
+                    if (!frontierSet.contains(neighbor) && !exploredSet.contains(neighbor)) {
+                        neighbor.parent = path;
+                        frontierQueue.add(neighbor);
+                        frontierSet.add(neighbor);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public void attackEnemyHills(Ants ants) {
+        for (Ant ant : myAnts) {
+            if (ant.isIdle()) {
+                ArrayList<Tile> closestHills = ant.distanceSort(ants.getEnemyHills());
+                if (closestHills.size() > 0) {
+                    ant.setGoal(closestHills.get(0));
+                }
+            }
+        }
+    }
+
+    public void attackEnemyAnts(Ants ants) {
+        for (Ant ant : myAnts) {
+            if (ant.isIdle()) {
+                ArrayList<Tile> closestEnemies = ant.distanceSort(ants.getEnemyAnts());
+                if (closestEnemies.size() > 0) {
+                    ant.setGoal(closestEnemies.get(0));
+                }
+            }
+        }
+    }
+
+    public void findFood(Ants ants) {
+        for (Ant ant : myAnts) {
+            if (ant.isIdle()) {
+                ArrayList<Tile> closestFood = ant.distanceSort(ants.getFoodTiles());
+                if (closestFood.size() > 0) {
+                    ant.setGoal(closestFood.get(0));
+                }
+            }
+        }
+    }
+
+    public void exploreMap(Ants ants) {
+        for (Ant ant : myAnts) {
+            if (ant.isIdle()) {
+                ArrayList<Tile> closestUnseen = ant.distanceSort(unseen);
+                if (closestUnseen.size() > 0) {
+                    ant.setGoal(closestUnseen.get(0));
+                }
+            }
+        }
     }
 
     public void doTurn() {
         Ants ants = getAnts();
+        clearNodeGrid();
 
         // remove dead ants
         ArrayList<Ant> oldAnts = new ArrayList<Ant>(myAnts);
@@ -84,16 +184,23 @@ public class MyBot extends Bot {
             }
         }
 
-        // avoid blocking the hill
-        List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
+        // assign goals
+        attackEnemyHills(ants);
+        //attackEnemyAnts(ants);
+        findFood(ants);
+        exploreMap(ants);
+
+        /*
         for (Ant ant : myAnts) {
             if (ants.getMyHills().contains(ant.position)) {
-                for (Aim direction : directions) {
-                    if (ant.move(direction)) {
-                        break;
-                    }
-                }
+                ant.randomMove();
             }
+        }
+        */
+
+        // update ants
+        for (Ant ant : myAnts) {
+            ant.update();
         }
     }
 }
