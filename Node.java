@@ -28,11 +28,11 @@ class Node {
 		return g + h;
 	}
 
-	public LinkedList<Node> getPath() {
-		LinkedList<Node> path = new LinkedList<Node>();
+	public LinkedList<Tile> getPath() {
+		LinkedList<Tile> path = new LinkedList<Tile>();
 		Node p = this.parent;
 		while (p != null) {
-			path.addFirst(p);
+			path.addFirst(p.position);
 			p = p.parent;
 		}
 		return path;
