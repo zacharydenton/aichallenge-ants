@@ -60,7 +60,7 @@ public class Ant {
 
     public void update() {
 
-        Logger.getAnonymousLogger().warning("starting update for ant at " + this.position);
+        //Logger.getAnonymousLogger().warning("starting update for ant at " + this.position);
         reserved.remove(this.position);
         if (!isIdle()) {
             if ((this.position.equals(this.goal)) || 
@@ -68,7 +68,8 @@ public class Ant {
                 this.setIdle();
             } else if (this.path != null) {
                 Tile nextStep = this.path.peek();
-                if (ants.getDistance(this.position, nextStep) == 1 
+                if (nextStep != null 
+                        && ants.getDistance(this.position, nextStep) == 1 
                         && this.move(nextStep)) {
                     this.path.removeFirst();
                 } else {
@@ -81,7 +82,7 @@ public class Ant {
                 }
             }
         } 
-        Logger.getAnonymousLogger().warning("finished update. ant is now at " + this.position);
+        //Logger.getAnonymousLogger().warning("finished update. ant is now at " + this.position);
     }
 
     public boolean isIdle() {
@@ -103,7 +104,7 @@ public class Ant {
             if (this.path.peek().equals(this.position)) {
                 this.path.removeFirst();
             }
-            Logger.getAnonymousLogger().warning("now taking path " + this.path + " to " + this.goal);
+            //Logger.getAnonymousLogger().warning("now taking path " + this.path + " to " + this.goal);
         }
     }
 
@@ -115,7 +116,7 @@ public class Ant {
             if (this.path.peek().equals(this.position)) {
                 this.path.removeFirst();
             }
-            Logger.getAnonymousLogger().warning("now taking path " + this.path + " to " + this.goal);
+            //Logger.getAnonymousLogger().warning("now taking path " + this.path + " to " + this.goal);
         }
     }
 

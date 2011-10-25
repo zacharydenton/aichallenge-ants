@@ -21,6 +21,7 @@ public class MyBot extends Bot {
     private HashSet<Tile> unseen;
     private ArrayList<ArrayList<Node>> nodeGrid;
     public ArrayList<Ant> myAnts;
+    private long timeTaken;
 
     public void setup(int loadTime, int turnTime, int rows, 
             int cols, int turns, int viewRadius2,
@@ -65,18 +66,21 @@ public class MyBot extends Bot {
         this.nodeGrid = null;
     }
 
-    public LinkedList<Tile> findPath(Tile start, Tile finish) {
+    public LinkedList<Tile> findPath(final Tile start, final Tile finish) {
+        final long startTime = System.nanoTime();
+
         if (this.nodeGrid == null) {
             generateNodeGrid();
         } else {
             resetNodeGrid();
         }
 
-        Logger.getAnonymousLogger().warning("finding path from " + start + " to " + finish);
+        Logger.getAnonymousLogger().warning("finding a path with " + (1000000000 - timeTaken) / 1000000000.0f + " seconds left");
+        //Logger.getAnonymousLogger().warning("finding path from " + start + " to " + finish);
 
         PriorityQueue<Node> frontierQueue = new PriorityQueue<Node>(1, new Comparator<Node>() {
             public int compare(Node a, Node b) {
-                return a.length() - b.length();
+                return (a.length() + getAnts().getDistance(a.position, finish)) - (b.length() + getAnts().getDistance(b.position, finish));
             }
         });
         frontierQueue.add(nodeGrid.get(start.getRow()).get(start.getCol()));
@@ -90,8 +94,10 @@ public class MyBot extends Bot {
             frontierSet.remove(path);
             exploredSet.add(path);
 
-            if (path.position.equals(finish)) {
-                Logger.getAnonymousLogger().warning("found a path: " + path.retracePath());
+            if (path.position.equals(finish) || timeTaken > 700000000) { // stop if we only have 0.3 seconds left
+                //Logger.getAnonymousLogger().warning("found a path: " + path.retracePath());
+                //Logger.getAnonymousLogger().warning("found a path after " + (System.nanoTime() - startTime) + " nanoseconds");
+                timeTaken += System.nanoTime() - startTime;
                 return path.retracePath();
             }
 
@@ -107,6 +113,7 @@ public class MyBot extends Bot {
                 }
             }
         }
+        timeTaken += System.nanoTime() - startTime;
         return null;
     }
 
@@ -185,6 +192,7 @@ public class MyBot extends Bot {
         }
 
         // assign goals
+        timeTaken = 0;
         attackEnemyHills(ants);
         //attackEnemyAnts(ants);
         findFood(ants);
