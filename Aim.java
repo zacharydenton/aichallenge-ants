@@ -39,7 +39,7 @@ public enum Aim {
 		behindLookup.put(NORTH, SOUTH);
 		behindLookup.put(SOUTH, NORTH);
 		behindLookup.put(EAST, WEST);
-
+		behindLookup.put(WEST, EAST);
     }
     
     private final int rowDelta;

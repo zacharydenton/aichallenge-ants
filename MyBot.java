@@ -18,10 +18,13 @@ public class MyBot extends Bot {
         new MyBot().readSystemInput();
     }
 
-    private HashSet<Tile> unseen;
-    private ArrayList<ArrayList<Node>> nodeGrid;
+    public HashSet<Tile> enemyHills;
+    private HashSet<Tile> capturedHills;
+    private ArrayList<ArrayList<Node>> targetNodeGrid;
+    private ArrayList<ArrayList<Node>> antNodeGrid;
     public ArrayList<Ant> myAnts;
-    private long timeTaken;
+    public HashMap<Tile, Ant> antMap;
+    private long startTime;
 
     public void setup(int loadTime, int turnTime, int rows, 
             int cols, int turns, int viewRadius2,
@@ -31,79 +34,104 @@ public class MyBot extends Bot {
                     cols, turns, viewRadius2, 
                     attackRadius2, spawnRadius2));
 
-        unseen = new HashSet<Tile>();
-        for (int r = 0; r < getAnts().getRows(); r++) {
-            for (int c = 0; c < getAnts().getCols(); c++) {
-                unseen.add(new Tile(r, c));
-            }
-        }
-
+        enemyHills = new HashSet<Tile>();
+        capturedHills = new HashSet<Tile>();
         myAnts = new ArrayList<Ant>();
+        antMap = new HashMap<Tile, Ant>();
     }
 
-    private void generateNodeGrid() {
-        nodeGrid = new ArrayList<ArrayList<Node>>();
+    private void generateTargetNodeGrid() {
+        targetNodeGrid = new ArrayList<ArrayList<Node>>();
         for (int row = 0; row < getAnts().getRows(); row++) {
-            nodeGrid.add(new ArrayList<Node>());
+            targetNodeGrid.add(new ArrayList<Node>());
             for (int col = 0; col < getAnts().getCols(); col++) {
                 Tile position = new Tile(row, col);
                 Ilk ilk = getAnts().getIlk(position);
                 boolean walkable = ilk.isPassable() && !getAnts().getMyHills().contains(position) && !Ant.reserved.contains(position);
-                nodeGrid.get(row).add(new Node(position, walkable, null));
+                targetNodeGrid.get(row).add(new Node(position, walkable, null));
             }
         }
     }
 
-    private void resetNodeGrid() {
-        for (ArrayList<Node> nodeArray : nodeGrid) {
+    private void resetTargetNodeGrid() {
+        for (ArrayList<Node> nodeArray : targetNodeGrid) {
             for (Node node : nodeArray) {
                 node.parent = null;
             }
         }
     }
 
-    private void clearNodeGrid() {
-        this.nodeGrid = null;
+    private void clearTargetNodeGrid() {
+        this.targetNodeGrid = null;
+    }
+
+    private void generateAntNodeGrid() {
+        antNodeGrid = new ArrayList<ArrayList<Node>>();
+        for (int row = 0; row < getAnts().getRows(); row++) {
+            antNodeGrid.add(new ArrayList<Node>());
+            for (int col = 0; col < getAnts().getCols(); col++) {
+                Tile position = new Tile(row, col);
+                Ilk ilk = getAnts().getIlk(position);
+                boolean walkable = ilk.isPassable() && !getAnts().getMyHills().contains(position) && !Ant.reserved.contains(position) && getAnts().isVisible(position);
+                antNodeGrid.get(row).add(new Node(position, walkable, null));
+            }
+        }
+    }
+
+    public int distanceToBase(Tile tile) {
+        int minDistance = 999999;
+        for (Tile hill : getAnts().getMyHills()) {
+            int dist = getAnts().getDistance(tile, hill);
+            if (dist < minDistance) {
+                minDistance = dist;
+            }
+        }
+        return minDistance;
+    }
+
+    private void resetAntNodeGrid() {
+        for (ArrayList<Node> nodeArray : antNodeGrid) {
+            for (Node node : nodeArray) {
+                node.parent = null;
+            }
+        }
+    }
+
+    private void clearAntNodeGrid() {
+        this.antNodeGrid = null;
     }
 
     public LinkedList<Tile> findPath(final Tile start, final Tile finish) {
-        final long startTime = System.nanoTime();
+        if (System.nanoTime() - startTime > 700000000) { return null; }
 
-        if (this.nodeGrid == null) {
-            generateNodeGrid();
+        if (this.antNodeGrid == null) {
+            generateAntNodeGrid();
         } else {
-            resetNodeGrid();
+            resetAntNodeGrid();
         }
-
-        Logger.getAnonymousLogger().warning("finding a path with " + (1000000000 - timeTaken) / 1000000000.0f + " seconds left");
-        //Logger.getAnonymousLogger().warning("finding path from " + start + " to " + finish);
 
         PriorityQueue<Node> frontierQueue = new PriorityQueue<Node>(1, new Comparator<Node>() {
             public int compare(Node a, Node b) {
                 return (a.length() + getAnts().getDistance(a.position, finish)) - (b.length() + getAnts().getDistance(b.position, finish));
             }
         });
-        frontierQueue.add(nodeGrid.get(start.getRow()).get(start.getCol()));
+        frontierQueue.add(antNodeGrid.get(start.getRow()).get(start.getCol()));
         HashSet<Node> frontierSet = new HashSet<Node>(frontierQueue);
         HashSet<Node> exploredSet = new HashSet<Node>();
         List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
-
 
         while (frontierQueue.size() > 0) {
             Node path = frontierQueue.poll();
             frontierSet.remove(path);
             exploredSet.add(path);
 
-            if (path.position.equals(finish) || timeTaken > 700000000) { // stop if we only have 0.3 seconds left
-                //Logger.getAnonymousLogger().warning("found a path: " + path.retracePath());
-                //Logger.getAnonymousLogger().warning("found a path after " + (System.nanoTime() - startTime) + " nanoseconds");
-                timeTaken += System.nanoTime() - startTime;
+            if (path.position.equals(finish)) { // stop if we only have 0.3 seconds left
                 return path.retracePath();
             }
 
             for (Aim direction : directions) {
                 Tile neighborTile = getAnts().getTile(path.position, direction);
-                Node neighbor = nodeGrid.get(neighborTile.getRow()).get(neighborTile.getCol());
+                Node neighbor = antNodeGrid.get(neighborTile.getRow()).get(neighborTile.getCol());
                 if (neighbor.walkable) {
                     if (!frontierSet.contains(neighbor) && !exploredSet.contains(neighbor)) {
                         neighbor.parent = path;
@@ -113,57 +141,243 @@ public class MyBot extends Bot {
                 }
             }
         }
-        timeTaken += System.nanoTime() - startTime;
         return null;
     }
 
-    public void attackEnemyHills(Ants ants) {
+    public void attackEnemyHills() {
+        if ( enemyHills.size() == 0 ) { return; }
+        ArrayList<Ant> closeAnts = new ArrayList<Ant>();
         for (Ant ant : myAnts) {
-            if (ant.isIdle()) {
-                ArrayList<Tile> closestHills = ant.distanceSort(ants.getEnemyHills());
-                if (closestHills.size() > 0) {
-                    ant.setGoal(closestHills.get(0));
+            ArrayList<Tile> closestHills = ant.distanceSort(enemyHills);
+            if (ant.getDistance(closestHills.get(0)) < 100) {
+                closeAnts.add(ant);
+            }
+        }
+        takeTargets(enemyHills, closeAnts);
+        //Logger.getAnonymousLogger().warning("elapsed time after attacking enemy hills: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+    }
+
+    public void attackEnemyAnts() {
+        //takeTargets(getAnts().getEnemyAnts());
+    }
+
+    public void findFood() {
+        HashSet<Tile> claimedFood = new HashSet<Tile>();
+        HashSet<Tile> unclaimedFood = new HashSet<Tile>(getAnts().getFoodTiles());
+        for (Ant ant : myAnts) {
+            if (ant.goal != null && getAnts().getFoodTiles().contains(ant.goal)) {
+                claimedFood.add(ant.goal);
+            }
+        }
+        unclaimedFood.removeAll(claimedFood);
+        //Logger.getAnonymousLogger().warning("claimed food: " + claimedFood);
+        //Logger.getAnonymousLogger().warning("unclaimed food: " + unclaimedFood);
+        if ( unclaimedFood.size() == 0 ) { return; }
+        ArrayList<Ant> closeAnts = new ArrayList<Ant>();
+        for (Ant ant : myAnts) {
+            if (ant.goal == null && (ant.isIdle() || ant.isExploring())) {
+                ArrayList<Tile> closestFood = ant.distanceSort(unclaimedFood);
+                for (Tile food : unclaimedFood) {
+                    if (ant.getVision().contains(food)) {
+                        closeAnts.add(ant);
+                    }
+                    break;
+                }
+            }
+        }
+        takeTargets(unclaimedFood, closeAnts);
+        //Logger.getAnonymousLogger().warning("elapsed time after finding food: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+    }
+
+    public void exploreMap() {
+        for (Ant ant : myAnts) {
+            if (ant.goal == null && ant.isIdle()) {
+                for (Tile target : ant.explorationTargets()) {
+                    if (ant.setGoal(target)) {
+                        ant.exploring = true;
+                        break;
+                    }
+                }
+            }
+        }
+        //Logger.getAnonymousLogger().warning("elapsed time after exploring base: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+    }
+
+    public void takeTargets(Set<Tile> targets, List<Ant> theAnts) {
+        // simultaneous A* from all target tiles to closest idle ants
+
+        if (targets.size() == 0) { return; }
+
+        final HashMap<Tile, Ant> idleMap = new HashMap<Tile, Ant>();
+
+        for (Ant ant : theAnts) {
+            idleMap.put(ant.position, ant);
+        }
+
+        //Logger.getAnonymousLogger().warning("finding paths to " + targets + " from ants at " + idleMap.values());
+        if (idleMap.keySet().size() == 0) { return; }
+
+
+        if (this.targetNodeGrid == null) {
+            generateTargetNodeGrid();
+        } else {
+            resetTargetNodeGrid();
+        }
+
+        PriorityQueue<Node> frontierQueue = new PriorityQueue<Node>(1, new Comparator<Node>() {
+            public int compare(Node a, Node b) {
+                LinkedList<Integer> aDistances = new LinkedList<Integer>();
+                LinkedList<Integer> bDistances = new LinkedList<Integer>();
+                for (Ant ant : idleMap.values()) {
+                        aDistances.add(new Integer(getAnts().getDistance(a.position, ant.position)));
+                        bDistances.add(new Integer(getAnts().getDistance(b.position, ant.position)));
+                }
+                Collections.sort(aDistances);
+                Collections.sort(bDistances);
+                int aMinDistance;
+                try {
+                    aMinDistance = aDistances.pop();
+                } catch (Exception e) {
+                    aMinDistance = 0;
+                }
+                int bMinDistance;
+                try {
+                    bMinDistance = bDistances.pop();
+                } catch (Exception e) {
+                    bMinDistance = 0;
+                }
+                return (a.length() + aMinDistance) - (b.length() + bMinDistance);
+            }
+        });
+        for (Tile target : targets) {
+            frontierQueue.add(targetNodeGrid.get(target.getRow()).get(target.getCol()));
+        }
+        HashSet<Node> frontierSet = new HashSet<Node>(frontierQueue);
+        HashSet<Node> exploredSet = new HashSet<Node>();
+        List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
+        //Logger.getAnonymousLogger().warning("finding seekers for the following: ");
+        for (Tile target : targets) {
+            //Logger.getAnonymousLogger().warning("the " + getAnts().getIlk(target) + " at " + target);
+        }
+
+        while (frontierQueue.size() > 0 && idleMap.keySet().size() > 0) {
+            Node path = frontierQueue.poll();
+            frontierSet.remove(path);
+            exploredSet.add(path);
+
+            //Logger.getAnonymousLogger().warning("now at: " + path.position + " (current path: " + path.retracePath() + ")");
+
+            if (idleMap.containsKey(path.position)) {
+                Ant ant = idleMap.get(path.position);
+                LinkedList<Tile> thePath = path.retracePath();
+                Collections.reverse(thePath);
+                ant.setGoal(thePath);
+                idleMap.remove(path.position);
+                if (idleMap.keySet().size() == 0) {
+                    return;
+                }
+            }
+
+            for (Aim direction : directions) {
+                Tile neighborTile = getAnts().getTile(path.position, direction);
+                Node neighbor = targetNodeGrid.get(neighborTile.getRow()).get(neighborTile.getCol());
+                if (neighbor.walkable || idleMap.containsKey(neighborTile)) {
+                    if (!frontierSet.contains(neighbor) && !exploredSet.contains(neighbor)) {
+                        neighbor.parent = path;
+                        frontierQueue.add(neighbor);
+                        frontierSet.add(neighbor);
+                    }
                 }
             }
         }
     }
 
-    public void attackEnemyAnts(Ants ants) {
+    public void takeTarget(Tile target) {
+        // A* from a target tile to closest idle ant
+        //Logger.getAnonymousLogger().warning("finding seeker for " + target);
+        final HashMap<Tile, Ant> idleMap = new HashMap<Tile, Ant>();
+
         for (Ant ant : myAnts) {
-            if (ant.isIdle()) {
-                ArrayList<Tile> closestEnemies = ant.distanceSort(ants.getEnemyAnts());
-                if (closestEnemies.size() > 0) {
-                    ant.setGoal(closestEnemies.get(0));
+            if (ant.goal == null && (ant.isIdle() || ant.isExploring())) {
+                idleMap.put(ant.position, ant);
+            }
+        }
+        //Logger.getAnonymousLogger().warning("idle ants: " + idleMap.keySet());
+        if (idleMap.keySet().size() == 0) { return; }
+
+
+        if (this.targetNodeGrid == null) {
+            generateTargetNodeGrid();
+        } else {
+            resetTargetNodeGrid();
+        }
+
+        PriorityQueue<Node> frontierQueue = new PriorityQueue<Node>(1, new Comparator<Node>() {
+            public int compare(Node a, Node b) {
+                LinkedList<Integer> aDistances = new LinkedList<Integer>();
+                LinkedList<Integer> bDistances = new LinkedList<Integer>();
+                for (Ant ant : idleMap.values()) {
+                        aDistances.add(new Integer(getAnts().getDistance(a.position, ant.position)));
+                        bDistances.add(new Integer(getAnts().getDistance(b.position, ant.position)));
+                }
+                Collections.sort(aDistances);
+                Collections.sort(bDistances);
+                int aMinDistance;
+                try {
+                    aMinDistance = aDistances.pop();
+                } catch (Exception e) {
+                    aMinDistance = 0;
+                }
+                int bMinDistance;
+                try {
+                    bMinDistance = bDistances.pop();
+                } catch (Exception e) {
+                    bMinDistance = 0;
+                }
+                return (a.length() + aMinDistance) - (b.length() + bMinDistance);
+            }
+        });
+        frontierQueue.add(targetNodeGrid.get(target.getRow()).get(target.getCol()));
+        HashSet<Node> frontierSet = new HashSet<Node>(frontierQueue);
+        HashSet<Node> exploredSet = new HashSet<Node>();
+        List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
+        //Logger.getAnonymousLogger().warning("finding paths from " + frontierSet + " to " + idleMap.keySet());
+
+        while (frontierQueue.size() > 0 && idleMap.keySet().size() > 0) {
+            Node path = frontierQueue.poll();
+            frontierSet.remove(path);
+            exploredSet.add(path);
+
+            //Logger.getAnonymousLogger().warning("now at: " + path.position + " (current path: " + path.retracePath() + ")");
+
+            if (idleMap.containsKey(path.position)) {
+                Ant ant = idleMap.get(path.position);
+                LinkedList<Tile> thePath = path.retracePath();
+                Collections.reverse(thePath);
+                ant.setGoal(thePath);
+                return;
+            }
+
+            for (Aim direction : directions) {
+                Tile neighborTile = getAnts().getTile(path.position, direction);
+                Node neighbor = targetNodeGrid.get(neighborTile.getRow()).get(neighborTile.getCol());
+                if (neighbor.walkable || idleMap.containsKey(neighborTile)) {
+                    if (!frontierSet.contains(neighbor) && !exploredSet.contains(neighbor)) {
+                        neighbor.parent = path;
+                        frontierQueue.add(neighbor);
+                        frontierSet.add(neighbor);
+                    }
                 }
             }
         }
     }
 
-    public void findFood(Ants ants) {
-        for (Ant ant : myAnts) {
-            if (ant.isIdle()) {
-                ArrayList<Tile> closestFood = ant.distanceSort(ants.getFoodTiles());
-                if (closestFood.size() > 0) {
-                    ant.setGoal(closestFood.get(0));
-                }
-            }
-        }
-    }
-
-    public void exploreMap(Ants ants) {
-        for (Ant ant : myAnts) {
-            if (ant.isIdle()) {
-                ArrayList<Tile> closestUnseen = ant.distanceSort(unseen);
-                if (closestUnseen.size() > 0) {
-                    ant.setGoal(closestUnseen.get(0));
-                }
-            }
-        }
-    }
 
     public void doTurn() {
+        startTime = System.nanoTime();
         Ants ants = getAnts();
-        clearNodeGrid();
+        clearTargetNodeGrid();
+        clearAntNodeGrid();
 
         // remove dead ants
         ArrayList<Ant> oldAnts = new ArrayList<Ant>(myAnts);
@@ -176,6 +390,8 @@ public class MyBot extends Bot {
             }
         }
 
+        //Logger.getAnonymousLogger().warning("elapsed time after removing dead ants: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+
         // add new ants
         HashSet<Tile> newAnts = new HashSet<Tile>(ants.getMyAnts());
         newAnts.removeAll(antPositions); // only consider ants we haven't seen before
@@ -183,32 +399,62 @@ public class MyBot extends Bot {
             myAnts.add(new Ant(ants, this, position));
         }
 
-        // update unseen squares
-        HashSet<Tile> oldUnseen = new HashSet<Tile>(unseen);
-        for (Tile loc : oldUnseen) {
-            if (ants.isVisible(loc)) {
-                unseen.remove(loc);
+        for (Ant ant : myAnts) {
+            antMap.put(ant.position, ant);
+        }
+
+        //Logger.getAnonymousLogger().warning("elapsed time after adding new ants: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+
+        //Logger.getAnonymousLogger().warning("elapsed time after updating unseen squares: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+
+        // remember enemy hills
+        for (Tile hillLoc : ants.getEnemyHills()) {
+            if (!capturedHills.contains(hillLoc)) {
+                enemyHills.add(hillLoc);
             }
         }
 
-        // assign goals
-        timeTaken = 0;
-        attackEnemyHills(ants);
-        //attackEnemyAnts(ants);
-        findFood(ants);
-        exploreMap(ants);
+        // remove captured hills
+        for (Tile hillLoc : enemyHills) {
+            if (ants.getMyAnts().contains(hillLoc)) {
+                capturedHills.add(hillLoc);
+            }
+        }
+        for (Tile hillLoc : capturedHills) {
+            if (enemyHills.contains(hillLoc)) {
+                enemyHills.remove(hillLoc);
+            }
+        }
 
-        /*
+        //Logger.getAnonymousLogger().warning("elapsed time after remembering enemy hills: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+
+        // prepare ants
+        for (Ant ant : myAnts) {
+            ant.beforeTurn();
+        }
+
+        //Logger.getAnonymousLogger().warning("elapsed time after preparing ants: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+
+        // move ants away from the base
         for (Ant ant : myAnts) {
             if (ants.getMyHills().contains(ant.position)) {
-                ant.randomMove();
+                ant.moveAwayFromBase();
             }
         }
-        */
+        
 
-        // update ants
+        //Logger.getAnonymousLogger().warning("elapsed time after moving ants off the base: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
+
+        // assign goals
+        attackEnemyHills();
+        findFood();
+        //attackEnemyAnts();
+        //exploreMap();
+
+        // move ants
         for (Ant ant : myAnts) {
-            ant.update();
+            ant.afterTurn();
         }
+        //Logger.getAnonymousLogger().warning("total time elapsed: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
     }
 }

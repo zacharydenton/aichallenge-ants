@@ -24,8 +24,8 @@ public class Ants {
 
 	private final int spawnRadius2;
 
-	private boolean[][] visionMatrix;
-	private ArrayList<int[]> visionOffsets2;
+	public boolean[][] visionMatrix;
+	public ArrayList<int[]> visionOffsets2;
 
 	private long turnStartTime;
 
@@ -452,4 +452,8 @@ public class Ants {
 		orders.add(order);
 		System.out.println(order);
 	}
+
+    public ArrayList<int[]> getVisionOffsets() {
+        return visionOffsets2;
+    }
 }

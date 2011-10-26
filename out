@@ -1,15 +1,2654 @@
-turn  197 bot 0 timed out
-Traceback (most recent call last):
-  File "/home/zach/code/java/aichallenge/tools/playgame.py", line 447, in <module>
-    sys.exit(main(sys.argv[1:]))
-  File "/home/zach/code/java/aichallenge/tools/playgame.py", line 242, in main
-    run_rounds(opts,args)
-  File "/home/zach/code/java/aichallenge/tools/playgame.py", line 411, in run_rounds
-    result = run_game(game, bots, engine_options)
-  File "/home/zach/Dropbox/code/java/aichallenge/tools/engine.py", line 212, in run_game
-    game.finish_turn()
-  File "/home/zach/Dropbox/code/java/aichallenge/tools/ants.py", line 1480, in finish_turn
-    self.update_revealed()
-  File "/home/zach/Dropbox/code/java/aichallenge/tools/ants.py", line 387, in update_revealed
-    for col, visible in enumerate(squares):
-KeyboardInterrupt
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 0.003846603 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 0.015729688 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.015955284 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.016145917 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.016344449 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.016513169 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.017087147 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 1.48109E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 0.002703266 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.003129268 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.003483683 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00375107 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.008872016 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 26 19, 28 17, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 26 19, 28 17, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.012611955 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.013100737 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 1.34082E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 9.88257E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.00125325 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001570039 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001844846 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002108135 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 17, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 17, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003571772 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003947647 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.3125E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.07454E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.73312E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.003759785 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.003959642 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.004355599 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 17, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 18 to food at 35 19 = 65
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 17, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.005777919 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.006135279 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.2411E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.59099E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.83977E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.94384E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001000724 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001211299 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 17 to food at 35 19 = 68
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002507135 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.002876828 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.3629E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.56401E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.66603E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.00484E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001009492 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001414435 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 16 to food at 35 19 = 73
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 18 to food at 35 19 = 65
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003365174 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003728212 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.4802E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 7.58608E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001224142 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001671051 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.002094152 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00255096 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 15 to food at 35 19 = 80
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 17 to food at 35 19 = 68
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.005778713 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.006574969 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.1682E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 7.72269E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001182734 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001595273 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001965997 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002338482 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 14 to food at 35 19 = 89
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 16 to food at 35 19 = 73
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 18 to food at 35 19 = 65
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.005098426 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.005802419 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.8945E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.86202E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.96891E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.38322E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001050185 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001267461 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 13 to food at 35 19 = 100
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 15 to food at 35 19 = 80
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 17 to food at 35 19 = 68
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003002584 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003446063 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.9467E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 8.01737E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001240873 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001636135 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00202137 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002428213 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 12 to food at 35 19 = 113
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 14 to food at 35 19 = 89
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 16 to food at 35 19 = 73
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004303443 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.004773524 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.6012E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.29766E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.64713E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001093386 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00131609 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001538455 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 11 to food at 35 13 = 68
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 13 to food at 35 13 = 64
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 15 to food at 35 13 = 68
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003281623 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003741543 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 1.1436E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 7.67201E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001035484 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001347188 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001613767 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001889126 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 10 to food at 35 13 = 73
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 12 to food at 35 13 = 65
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 14 to food at 35 13 = 65
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003799355 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.004198774 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 8.7481E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.44018E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.30813E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.93604E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001051405 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001212148 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 9 to food at 35 13 = 80
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 11 to food at 35 13 = 68
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 13 to food at 35 13 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002797713 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003145376 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.1672E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.54208E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.16485E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.73376E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.27169E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.81275E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 35 13, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 8 to food at 35 5 = 73
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 10 to food at 35 5 = 89
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 12 to food at 35 5 = 113
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 35 13, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002175642 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.002520439 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.0001E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.13276E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.93766E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001234514 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00143937 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001666463 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 35 13, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 7 to food at 35 5 = 68
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 9 to food at 35 5 = 80
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 11 to food at 35 5 = 100
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 35 13, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003210107 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003694356 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.7361E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.97967E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001084208 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001431635 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001805968 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002196036 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 35 13, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 6 to food at 35 5 = 65
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 8 to food at 35 5 = 73
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 10 to food at 35 5 = 89
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 35 13, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004781898 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.005596171 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.9947E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.71884E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.76621E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.84602E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.85962E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001212473 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 5 to food at 35 5 = 64
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 7 to food at 35 5 = 68
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 9 to food at 35 5 = 80
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002726003 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003324551 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.3541E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.32929E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.28801E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.29049E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.50229E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001148851 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 26 5 to food at 35 5 = 81
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 6 to food at 35 5 = 65
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 8 to food at 35 5 = 73
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002566228 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.003001851 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.3963E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.396E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.34069E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.32395E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.53338E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001152251 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 25 5 to food at 35 5 = 100
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 5 to food at 35 5 = 64
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 7 to food at 35 5 = 68
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002559576 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.002975182 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.6411E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.80985E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.17814E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001309841 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001664211 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002069895 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 24 5 to food at 35 5 = 121
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 26 5 to food at 35 5 = 81
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 6 to food at 35 5 = 65
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004740342 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.005359416 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 0.007468238 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 0.008312375 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.008705482 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.009074289 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.009528423 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.009927643 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 21 5]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 23 5 to food at 35 5 = 144
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 25 5 to food at 35 5 = 100
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 5 to food at 35 5 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 21 5] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.016174963 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.016869573 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.2748E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.06942E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.54362E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 5.99932E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.65045E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.07585E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.001502626 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.574E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.16293E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.68364E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001345051 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001685739 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.007193557 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 21 5 to food at 35 19 = 392
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 23 5 to food at 35 19 = 340
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 25 5 to food at 35 19 = 296
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.010346641 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.01088608 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.0756E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.55394E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.04365E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.506E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.93002E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.59744E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 20 5 to food at 35 19 = 421
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 22 5 to food at 35 19 = 365
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 24 5 to food at 35 19 = 317
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002147758 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.002540557 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.9874E-5 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.62206E-4 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001039318 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001386928 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00176225 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00210804 seconds
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 19 5 to food at 35 19 = 452
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 21 5 to food at 35 19 = 392
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 23 5 to food at 35 19 = 340
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: distance from ant at 27 18 to food at 35 19 = 65
+Oct 26, 2011 2:38:45 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:45 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.005322211 seconds
+Oct 26, 2011 2:38:45 PM MyBot doTurn
+WARNING: total time elapsed: 0.005947637 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.3342E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.24123E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.72952E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.17849E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.59148E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.21423E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 18 5 to food at 35 19 = 485
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 20 5 to food at 35 19 = 421
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 22 5 to food at 35 19 = 365
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 17 to food at 35 19 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002166169 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002557878 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.0862E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.67159E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.98611E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001224595 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001457002 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001726528 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 17 5 to food at 35 19 = 520
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 19 5 to food at 35 19 = 452
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 21 5 to food at 35 19 = 392
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 16 to food at 35 19 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003694523 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.004290155 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.1368E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.27598E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001016776 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.00137452 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001958689 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002321992 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 16 5 to food at 35 13 = 425
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 18 5 to food at 35 13 = 353
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 20 5 to food at 35 13 = 289
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 15 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004805431 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.005304186 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.8918E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.86819E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001123648 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.00150931 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001907304 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002268825 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 7 5, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 15 5 to food at 35 13 = 464
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 17 5 to food at 35 13 = 388
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 19 5 to food at 35 13 = 320
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 14 to food at 35 13 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 7 5, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003986519 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.00449584 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.2353E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.96118E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001041286 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001477729 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001855871 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00222164 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 7 5, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 14 5 to food at 35 13 = 505
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 16 5 to food at 35 13 = 425
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 18 5 to food at 35 13 = 353
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 13 to food at 35 13 = 64
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 7 5, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.005426614 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.006280943 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 7.1001E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.96961E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.19666E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.44328E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001137492 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001344037 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 7 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 13 5 to food at 35 13 = 505
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 15 5 to food at 35 13 = 464
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 17 5 to food at 35 13 = 388
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 12 to food at 35 13 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 7 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002933002 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003393268 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 1.04639E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 8.30889E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001060451 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001260477 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00145362 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00164752 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 7 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 5 to food at 35 13 = 464
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 14 5 to food at 35 13 = 505
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 16 5 to food at 35 13 = 425
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 11 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 7 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.00344905 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.00400276 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.4474E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.24867E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.55833E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.44967E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.01202E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001045217 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 7 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 5 to food at 35 13 = 425
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 13 5 to food at 35 13 = 505
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 15 5 to food at 35 13 = 464
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 10 to food at 35 13 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 7 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002342262 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002793769 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.2131E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.60945E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.74167E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001173044 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001374479 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001624274 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [7 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 10 5 to food at 7 5 = 9
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 5 to food at 7 5 = 25
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 14 5 to food at 7 5 = 49
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 9 to food at 7 5 = 416
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [7 5] from ants at [Ant@6791d8c1, Ant@182d9c06]
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding seekers for the following: 
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: the FOOD at 7 5
+Oct 26, 2011 2:38:46 PM Ant setGoal
+WARNING: now taking path [10 5, 9 5, 8 5, 7 5] to 7 5
+Oct 26, 2011 2:38:46 PM Ant setGoal
+WARNING: now taking path [12 5, 11 5, 10 5, 9 5, 8 5, 7 5] to 7 5
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.014710254 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.016640786 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.37E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.15845E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.6368E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.09302E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.53972E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.2045E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: [7 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 9 5 to food at 35 5 = 289
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 5 to food at 35 5 = 361
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 13 5 to food at 35 5 = 441
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 8 to food at 35 5 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002124851 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002432291 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.6498E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.69635E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.48153E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.20972E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001065704 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001244022 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 9 5 to food at 35 5 = 289
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 5 to food at 35 5 = 361
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 5 to food at 35 5 = 400
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 7 to food at 35 5 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003824905 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.004164209 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.6142E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.43133E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.92265E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.36943E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.19863E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001154968 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 9 5 to food at 35 5 = 289
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 5 to food at 35 5 = 361
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 5 to food at 35 5 = 400
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 6 to food at 35 5 = 65
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 5 = 260
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.0033547 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003991551 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.6476E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.31747E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.87854E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001070915 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001325554 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001583846 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5, 35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 10 5 to food at 35 5 = 324
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 5 to food at 35 5 = 361
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 6 to food at 35 5 = 401
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 5 to food at 35 5 = 64
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 5 = 260
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5, 35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004015611 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.004710727 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.533E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.37777E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.09789E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.16435E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.95506E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001077052 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 10 5 to food at 35 19 = 520
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 6 to food at 35 19 = 530
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 7 to food at 35 19 = 544
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 26 5 to food at 35 19 = 277
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 18 to food at 35 19 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002832732 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003553044 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.689E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.65173E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.67997E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001181284 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001522019 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001830682 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 10 6 to food at 35 19 = 493
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 7 to food at 35 19 = 505
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 12 8 to food at 35 19 = 521
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 25 5 to food at 35 19 = 296
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 17 to food at 35 19 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003826259 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.004508715 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 7.376E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.31403E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001039176 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001354408 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001723268 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002034536 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 10 7 to food at 35 19 = 468
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 11 8 to food at 35 19 = 482
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 24 5 to food at 35 19 = 317
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 16 to food at 35 19 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004831732 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.005409992 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 0.00320467 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 0.003776765 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.004165306 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.004545838 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.004888415 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.005197492 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 10 8 to food at 35 13 = 349
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 23 5 to food at 35 13 = 208
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 15 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.007325679 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.007844899 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.3504E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.12917E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.57365E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 5.99628E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.43981E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.32685E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 22 5 to food at 35 13 = 233
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 14 to food at 35 13 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002050869 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.00239195 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.245E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.13704E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.91132E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001022735 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001255106 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001530924 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 21 5 to food at 35 13 = 260
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 13 to food at 35 13 = 64
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.00298649 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003460361 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.2232E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.1176E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.66827E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.70504E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.82355E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001069181 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 20 5 to food at 35 13 = 289
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 12 to food at 35 13 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.00222747 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002553441 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.6229E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.9264E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.6533E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.97132E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.75205E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001052405 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 19 5 to food at 35 13 = 320
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 11 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.00211831 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002416716 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.7034E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.54119E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.77917E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.38108E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001157263 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001363651 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 18 5 to food at 35 13 = 353
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 10 to food at 35 13 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002564961 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002906076 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.4363E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.06118E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.63951E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.53318E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00109862 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001283802 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002010102 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.8817E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.22888E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001018303 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001349875 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001724753 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002044206 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 16 5 to food at 35 5 = 361
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 8 to food at 35 5 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003641923 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.004206938 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.8612E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.46881E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.30782E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.40734E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.23625E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001106854 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 15 5 to food at 35 5 = 400
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 7 to food at 35 5 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002199465 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002550147 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.2926E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.20842E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001005324 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001202397 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001429029 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001635423 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 14 5 to food at 35 5 = 441
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 6 to food at 35 5 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002897003 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003314323 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.3314E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.62673E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.54421E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001372616 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001842047 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002324445 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 13 5 to food at 35 5 = 441
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 5 to food at 35 5 = 64
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.004352831 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.004747648 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.9694E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.16104E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.94533E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.7957E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.57743E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001038344 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001724204 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.6601E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.30274E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.2957E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001119403 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001385474 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001567866 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002250196 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.6442E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.84756E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.58572E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.38361E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.65651E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001263057 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002684226 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 1.18234E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 8.049E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001322736 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001677809 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.003528565 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.006953348 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.008662665 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.0535E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.9798E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.60932E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.00972E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.39124E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 8.75567E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001367013 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.5643E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.29307E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.7593E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001081248 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001276038 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001472642 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002446299 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.1138E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.95178E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.68317E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.58865E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.8255E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001286456 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002439503 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.3583E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.58623E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.51057E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.28354E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001273551 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001584065 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.0022725 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.7877E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.92173E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.20558E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001141033 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001503395 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001819694 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002951299 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.5255E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.6401E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.3988E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.19752E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.94911E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001073 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001743695 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.8477E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.73817E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.52133E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001288137 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00164641 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.002048884 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003350132 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.0781E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.34744E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.10656E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.16446E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.96593E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001078404 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001765953 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.7458E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.86404E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.17071E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001016847 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001208889 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001421994 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 0 5 to food at 35 5 = 64
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 14 5 to food at 35 5 = 441
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002574684 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003049317 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.1193E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.84752E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.77339E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.69254E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.49261E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001186228 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 42 5 to food at 35 5 = 49
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 13 5 to food at 35 5 = 441
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002333219 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002688647 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.054E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.90851E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.53014E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 5.91613E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.25515E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 8.59778E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 41 5 to food at 35 5 = 36
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.001661349 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.00184714 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.5039E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.33072E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.79498E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.21438E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.59656E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.19773E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 40 5 to food at 35 5 = 25
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 5] from ants at [Ant@2911a3a4]
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding seekers for the following: 
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: the FOOD at 35 5
+Oct 26, 2011 2:38:46 PM Ant setGoal
+WARNING: now taking path [40 5, 39 5, 38 5, 37 5, 36 5, 35 5] to 35 5
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.006350468 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.006598073 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.5611E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.85473E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.62512E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.45592E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.37784E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001041586 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001639317 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.2847E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.19267E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.72542E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.12288E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.48357E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.06761E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 38 5 to food at 35 13 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.001856199 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002219144 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.1991E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.00565E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.56465E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001269881 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001632351 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001936889 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: [35 5]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 37 5 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.003167751 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003523443 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.7596E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.03481E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.90436E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.74718E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.98542E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001177318 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 37 5 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002063278 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002235919 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.7821E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.15292E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.52861E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.59327E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001167711 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001512899 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 37 5 to food at 35 19 = 200
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002796886 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003074663 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.4208E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.08675E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.66576E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.05586E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.63367E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001005924 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 19 to food at 35 19 = 64
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.001935674 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002205249 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.812E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.13275E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.1556E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.44136E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001040155 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00123986 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 18 to food at 35 19 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002400478 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002809409 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.4498E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.50179E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.85525E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.77342E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001159014 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001349273 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 17 to food at 35 19 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002334689 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002651939 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.6083E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.78416E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.65815E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.40477E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.66595E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001066717 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 19, 35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 16 to food at 35 19 = 73
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 19, 35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.001937039 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002294219 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.5743E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.77888E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.4788E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.23334E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.94551E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.6687E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 15 to food at 35 13 = 68
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002117904 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002603226 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.5106E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.32026E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.26155E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001046498 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001238485 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001427105 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [35 13, 28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 14 to food at 35 13 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [35 13, 28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002380493 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002647387 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.5706E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 6.07121E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.319E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001289696 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001611719 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001840998 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: [28 21]
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: distance from ant at 27 13 to food at 28 21 = 65
+Oct 26, 2011 2:38:46 PM MyBot takeTargets
+WARNING: finding paths to [28 21] from ants at []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: elapsed time after finding food: 0.002875758 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003226932 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.7104E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.07065E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.46954E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.00115745 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001479758 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001813318 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002744818 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 8.3772E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.13907E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.68718E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.02532E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.30388E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.57569E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001437777 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.7623E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.92357E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.58959E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.30387E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.17759E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.84947E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001652294 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.691E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.08755E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.23343E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.06293E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.84965E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001175086 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001775743 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.9616E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.32709E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.99812E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.74266E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.62094E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001033567 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001574378 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.7753E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.08874E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.99472E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.7302E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.42336E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001012225 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001583206 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.7433E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.18679E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.08652E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.84048E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.5538E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001026679 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001597402 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.4952E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.4518E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.30584E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.3264E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001113878 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001287319 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001956122 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.8053E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.1226E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.01276E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.75957E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.45504E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001024604 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001736573 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.5173E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.74389E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.45252E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.19291E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.88959E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.81706E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001532802 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 8.0642E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 7.03499E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.001062304 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001396605 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00172618 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00208063 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.003167385 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.212E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.55233E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 7.58629E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.6254E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.00116395 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001354047 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002019731 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.7892E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.95577E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.65212E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.38808E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.06931E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.75897E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.00156764 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.0493E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 0.00277521 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 0.003010484 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.00342359 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.003764705 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.004071959 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.005023994 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.6681E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.98666E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.86021E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.57725E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.23676E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.89261E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001554854 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.7925E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.20346E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.48455E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 9.68524E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001283891 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001636673 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.002394584 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.6312E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.95159E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.48103E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.40402E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001010759 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00118678 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.00519613 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.8691E-5 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.80514E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.70319E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.46028E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.16014E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.85737E-4 seconds
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:46 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:46 PM MyBot doTurn
+WARNING: total time elapsed: 0.001577211 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.8387E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.55221E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 9.07023E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001225879 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001538311 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001881169 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.002791552 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.9381E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.08941E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.96437E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.69764E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.42848E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.005101333 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.006360589 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 4.2515E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 5.24477E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 8.42412E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 0.001159452 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001391311 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00159553 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.003079542 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.455E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.07209E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.90295E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.85343E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.71989E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001094424 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001635403 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.9638E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.90637E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.55905E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.29406E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.1613E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.84515E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001545175 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.1598E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.43837E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.33754E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.07778E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.76278E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.00104481 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001621692 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.9049E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.93151E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.58866E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.32391E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.197E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.87814E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001545357 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.9153E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.20599E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.11581E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.90528E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.61946E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001035266 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001626018 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 6.4006E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.41108E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.39275E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.26714E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 0.001010119 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001191736 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001855167 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 2.7617E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.79998E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.4582E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.21478E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 7.93765E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 9.83576E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.001548043 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.561E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.50806E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.41872E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.31611E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.9885E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001068844 seconds
+Oct 26, 2011 2:38:47 PM MyBot takeTargets
+WARNING: finding paths to [14 19] from ants at []
+Oct 26, 2011 2:38:47 PM MyBot attackEnemyHills
+WARNING: elapsed time after attacking enemy hills: 0.001449349 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.002005804 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 5.0164E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 4.47244E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 6.16979E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 8.09706E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.82828E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001182916 seconds
+Oct 26, 2011 2:38:47 PM MyBot takeTargets
+WARNING: finding paths to [14 19] from ants at []
+Oct 26, 2011 2:38:47 PM MyBot attackEnemyHills
+WARNING: elapsed time after attacking enemy hills: 0.001571503 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.002233208 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.1198E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 3.53783E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 5.60327E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 7.53105E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 9.46785E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001123622 seconds
+Oct 26, 2011 2:38:47 PM MyBot takeTargets
+WARNING: finding paths to [14 19] from ants at []
+Oct 26, 2011 2:38:47 PM MyBot attackEnemyHills
+WARNING: elapsed time after attacking enemy hills: 0.001488307 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.002102221 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after removing dead ants: 3.0272E-5 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after adding new ants: 2.97198E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after updating unseen squares: 4.88709E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after remembering enemy hills: 6.92135E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after preparing ants: 8.621E-4 seconds
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: elapsed time after moving ants off the base: 0.001035117 seconds
+Oct 26, 2011 2:38:47 PM MyBot takeTargets
+WARNING: finding paths to [14 19] from ants at [Ant@4ee91f5d]
+Oct 26, 2011 2:38:47 PM MyBot takeTargets
+WARNING: finding seekers for the following: 
+Oct 26, 2011 2:38:47 PM MyBot takeTargets
+WARNING: the LAND at 14 19
+Oct 26, 2011 2:38:47 PM Ant setGoal
+WARNING: now taking path [13 14, 13 15, 14 15, 14 16, 14 17, 14 18, 14 19] to 14 19
+Oct 26, 2011 2:38:47 PM MyBot attackEnemyHills
+WARNING: elapsed time after attacking enemy hills: 0.00744264 seconds
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: claimed food: []
+Oct 26, 2011 2:38:47 PM MyBot findFood
+WARNING: unclaimed food: []
+Oct 26, 2011 2:38:47 PM MyBot doTurn
+WARNING: total time elapsed: 0.008425363 seconds
