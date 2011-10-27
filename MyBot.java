@@ -145,14 +145,21 @@ public class MyBot extends Bot {
     }
 
     public void attackEnemyHills() {
+        Logger.getAnonymousLogger().warning("enemy hills at: " + enemyHills);
         if ( enemyHills.size() == 0 ) { return; }
         ArrayList<Ant> closeAnts = new ArrayList<Ant>();
         for (Ant ant : myAnts) {
-            ArrayList<Tile> closestHills = ant.distanceSort(enemyHills);
-            if (ant.getDistance(closestHills.get(0)) < 100) {
-                closeAnts.add(ant);
+            if (ant.isIdle() || ant.isExploring()) {
+                ArrayList<Tile> closestHills = ant.distanceSort(enemyHills);
+                Tile hill = closestHills.get(0);
+                if (ant.goal == null && ant.getDistance(hill) < 300) {
+                    closeAnts.add(ant);
+                    //LinkedList<Tile> path = findPath(ant.position, hill);
+                    //ant.setGoal(path);
+                }
             }
         }
+        Logger.getAnonymousLogger().warning("going to attack them with ants at: " + closeAnts);
         takeTargets(enemyHills, closeAnts);
         //Logger.getAnonymousLogger().warning("elapsed time after attacking enemy hills: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
     }
@@ -260,7 +267,7 @@ public class MyBot extends Bot {
             //Logger.getAnonymousLogger().warning("the " + getAnts().getIlk(target) + " at " + target);
         }
 
-        while (frontierQueue.size() > 0 && idleMap.keySet().size() > 0) {
+        while (frontierQueue.size() > 0 && idleMap.keySet().size() > 0 && (System.nanoTime() - startTime) < 800000000) {
             Node path = frontierQueue.poll();
             frontierSet.remove(path);
             exploredSet.add(path);

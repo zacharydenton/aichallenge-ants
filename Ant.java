@@ -13,16 +13,53 @@ public class Ant {
     private Aim currentDirection;
     private boolean followingWall = false;
     public boolean exploring = false;
+    public ArrayList<Aim> preferredDirections = new ArrayList<Aim>();
+    public int antNumber;
 
+    public static int antCount = 0;
     public static HashSet<Tile> reserved = new HashSet<Tile>();
 
     public Ant(Ants ants, MyBot bot, Tile position) {
         this.ants = ants;
         this.bot = bot;
         this.position = position;
+        this.antNumber = Ant.antCount;
+        Ant.antCount++;
+
+        switch (antNumber % 8) {
+            case 0:
+                preferredDirections.add(Aim.NORTH);
+                break;
+            case 1:
+                preferredDirections.add(Aim.EAST);
+                break;
+            case 2:
+                preferredDirections.add(Aim.SOUTH);
+                break;
+            case 3:
+                preferredDirections.add(Aim.WEST);
+                break;
+            case 4:
+                preferredDirections.add(Aim.NORTH);
+                preferredDirections.add(Aim.EAST);
+                break;
+            case 5:
+                preferredDirections.add(Aim.SOUTH);
+                preferredDirections.add(Aim.EAST);
+                break;
+            case 6:
+                preferredDirections.add(Aim.SOUTH);
+                preferredDirections.add(Aim.WEST);
+                break;
+            case 7:
+                preferredDirections.add(Aim.NORTH);
+                preferredDirections.add(Aim.WEST);
+                break;
+        }
     }
 
     public boolean move(Aim direction) {
+        if (moved) { return false; }
         Tile destination = ants.getTile(this.position, direction);
         Ilk ilk = ants.getIlk(destination);
         if ((ilk.isTakable() || ilk.isUnoccupied()) 
@@ -187,9 +224,30 @@ public class Ant {
     public boolean moveAwayFrom(final Tile tile) {
         PriorityQueue<Aim> directions = new PriorityQueue<Aim>(1, new Comparator<Aim>() {
             public int compare(Aim a, Aim b) {
-                Tile destinationA = ants.getTile(Ant.this.position, a);
-                Tile destinationB = ants.getTile(Ant.this.position, b);
-                return Ant.this.ants.getDistance(tile, destinationB) - Ant.this.ants.getDistance(tile, destinationA);
+                Tile destinationA = Ant.this.ants.getTile(Ant.this.position, a);
+                Tile destinationB = Ant.this.ants.getTile(Ant.this.position, b);
+                int distanceA = Ant.this.ants.getDistance(tile, destinationA);
+                int distanceB = Ant.this.ants.getDistance(tile, destinationB);
+                List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
+                int neighborsA = 0;
+                int neighborsB = 0;
+                for (Aim direction : directions) {
+                    Ilk ilkA = Ant.this.ants.getIlk(destinationA, direction);
+                    if ((ilkA.isTakable() || ilkA.isUnoccupied()) 
+                            && !reserved.contains(Ant.this.ants.getTile(destinationA, direction))
+                            && !Ant.this.ants.getMyHills().contains(Ant.this.ants.getTile(destinationA, direction))) {
+                                neighborsA++;
+                            }
+                    Ilk ilkB = Ant.this.ants.getIlk(destinationB, direction);
+                    if ((ilkB.isTakable() || ilkB.isUnoccupied()) 
+                            && !reserved.contains(Ant.this.ants.getTile(destinationB, direction))
+                            && !Ant.this.ants.getMyHills().contains(Ant.this.ants.getTile(destinationB, direction))) {
+                                neighborsB++;
+                            }
+
+                }
+
+                return (distanceB + neighborsB) - (distanceA + neighborsA);
             }
         });
         directions.addAll(EnumSet.allOf(Aim.class));
@@ -262,6 +320,13 @@ public class Ant {
             }
         }
 
+        for (Aim direction : preferredDirections) {
+            if (this.move(direction)) {
+                Collections.reverse(preferredDirections);
+                return;
+            }
+        }
+
         if (!followingWall) {
             Tile destination = ants.getTile(this.position, currentDirection);
             if (ants.getIlk(destination).isPassable() && !ants.getMyHills().contains(destination)) {
@@ -289,6 +354,7 @@ public class Ant {
                 if (ants.getIlk(destination).isPassable() && !ants.getMyHills().contains(destination)) {
                     if (this.move(direction)) {
                         currentDirection = direction;
+                        followingWall = false;
                         break;
                     } else {
                         // pause ant, turn and send straight
