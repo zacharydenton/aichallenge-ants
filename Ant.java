@@ -16,7 +16,7 @@ public class Ant {
     public List<Aim> preferredDirections = new ArrayList<Aim>();
     public int antNumber;
     public Set<Tile> seen = new HashSet<Tile>();
-
+    private Tile closestUnseen;
 
     private static ArrayList<ArrayList<Node>> nodeGrid;
     public static int antCount = 0;
@@ -130,6 +130,7 @@ public class Ant {
     public void beforeTurn() {
         moved = false;
         seen.addAll(getVision());
+        closestUnseen = getClosest(bot.unseen);
         if (this.goal != null) {
             if ((this.position.equals(this.goal)) || (this.goalIlk != ants.getIlk(this.goal))) {
                 this.clearGoal();
@@ -233,10 +234,14 @@ public class Ant {
         return ants.getDistance(this.position, other);
     }
 
+    public Tile getClosest(Collection<Tile> c) {
+        return distanceSort(c).peek();
+    }
+
     public boolean foodMove() {
-        ArrayList<Tile> closestFood = this.distanceSort(ants.getFoodTiles());
+        PriorityQueue<Tile> closestFood = this.distanceSort(ants.getFoodTiles());
         if (closestFood.size() > 0) {
-            Tile food = closestFood.get(0);
+            Tile food = closestFood.peek();
             for (Aim direction : ants.getDirections(this.position, food)) {
                 if (this.move(direction)) {
                     return true;
@@ -366,13 +371,13 @@ public class Ant {
 
 
 
-    public ArrayList<Tile> distanceSort(Collection<Tile> c) {
-        ArrayList<Tile> sorted = new ArrayList<Tile>(c);
-        Collections.sort(sorted, new Comparator<Tile>() {
+    public PriorityQueue<Tile> distanceSort(Collection<Tile> c) {
+        PriorityQueue<Tile> sorted = new PriorityQueue<Tile>(1, new Comparator<Tile>() {
             public int compare(Tile a, Tile b) {
                 return Ant.this.getDistance(a) - Ant.this.getDistance(b);
             }
         });
+        sorted.addAll(c);
         return sorted;
     }
 
@@ -534,7 +539,13 @@ public class Ant {
         }
         PriorityQueue<Node> frontierQueue = new PriorityQueue<Node>(1, new Comparator<Node>() {
             public int compare(Node a, Node b) {
-                return a.length() - b.length();
+                int distA = 0;
+                int distB = 0;
+                if (Ant.this.closestUnseen != null) {
+                    distA = Ant.this.ants.getDistance(a.position, Ant.this.closestUnseen);
+                    distB = Ant.this.ants.getDistance(a.position, Ant.this.closestUnseen);
+                }
+                return (distA + a.length()) - (distB + b.length());
             }
         });
         frontierQueue.add(nodeGrid.get(this.position.getRow()).get(this.position.getCol()));

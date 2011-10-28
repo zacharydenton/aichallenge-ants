@@ -25,6 +25,7 @@ public class MyBot extends Bot {
     public ArrayList<Ant> myAnts;
     public HashMap<Tile, Ant> antMap;
     private long startTime;
+    public Set<Tile> unseen;
 
     public void setup(int loadTime, int turnTime, int rows, 
             int cols, int turns, int viewRadius2,
@@ -38,6 +39,12 @@ public class MyBot extends Bot {
         capturedHills = new HashSet<Tile>();
         myAnts = new ArrayList<Ant>();
         antMap = new HashMap<Tile, Ant>();
+        unseen = new HashSet<Tile>();
+        for (int row = 0; row < getAnts().getRows(); row++) {
+            for (int col = 0; col < getAnts().getCols(); col++) {
+                unseen.add(new Tile(row, col));
+            }
+        }
     }
 
     private void generateTargetNodeGrid() {
@@ -149,8 +156,8 @@ public class MyBot extends Bot {
         if ( enemyHills.size() == 0 ) { return; }
         ArrayList<Ant> closeAnts = new ArrayList<Ant>();
         for (Ant ant : myAnts) {
-            ArrayList<Tile> closestHills = ant.distanceSort(enemyHills);
-            Tile hill = closestHills.get(0);
+            PriorityQueue<Tile> closestHills = ant.distanceSort(enemyHills);
+            Tile hill = closestHills.peek();
             if (ant.goal == null || !ant.goal.equals(hill)) {
                 if (ant.getDistance(hill) < 300) {
                     closeAnts.add(ant);
@@ -184,7 +191,7 @@ public class MyBot extends Bot {
                     for (Ant ally : closestAllies) {
                         ally.setGoal(closestEnemy);
                     }
-                } 
+                }
             }
         }
     }
@@ -204,7 +211,7 @@ public class MyBot extends Bot {
         ArrayList<Ant> closeAnts = new ArrayList<Ant>();
         for (Ant ant : myAnts) {
             if (ant.goal == null || ant.isExploring()) {
-                ArrayList<Tile> closestFood = ant.distanceSort(unclaimedFood);
+                PriorityQueue<Tile> closestFood = ant.distanceSort(unclaimedFood);
                 for (Tile food : unclaimedFood) {
                     if (ant.getVision().contains(food)) {
                         closeAnts.add(ant);
@@ -428,6 +435,7 @@ public class MyBot extends Bot {
 
         for (Ant ant : myAnts) {
             antMap.put(ant.position, ant);
+            unseen.removeAll(ant.getVision());
         }
 
         //Logger.getAnonymousLogger().warning("elapsed time after adding new ants: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
