@@ -145,27 +145,48 @@ public class MyBot extends Bot {
     }
 
     public void attackEnemyHills() {
-        Logger.getAnonymousLogger().warning("enemy hills at: " + enemyHills);
+        //Logger.getAnonymousLogger().warning("enemy hills at: " + enemyHills);
         if ( enemyHills.size() == 0 ) { return; }
         ArrayList<Ant> closeAnts = new ArrayList<Ant>();
         for (Ant ant : myAnts) {
-            if (ant.isIdle() || ant.isExploring()) {
-                ArrayList<Tile> closestHills = ant.distanceSort(enemyHills);
-                Tile hill = closestHills.get(0);
-                if (ant.goal == null && ant.getDistance(hill) < 300) {
+            ArrayList<Tile> closestHills = ant.distanceSort(enemyHills);
+            Tile hill = closestHills.get(0);
+            if (ant.goal == null || !ant.goal.equals(hill)) {
+                if (ant.getDistance(hill) < 300) {
                     closeAnts.add(ant);
-                    //LinkedList<Tile> path = findPath(ant.position, hill);
-                    //ant.setGoal(path);
+                } else {
+                    ant.preferredDirections = getAnts().getDirections(ant.position, hill);
                 }
             }
         }
-        Logger.getAnonymousLogger().warning("going to attack them with ants at: " + closeAnts);
         takeTargets(enemyHills, closeAnts);
         //Logger.getAnonymousLogger().warning("elapsed time after attacking enemy hills: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
     }
 
     public void attackEnemyAnts() {
-        //takeTargets(getAnts().getEnemyAnts());
+        for (final Ant ant : myAnts) {
+            if (ant.enemiesNearby().size() > 0) {
+                PriorityQueue<Tile> closestEnemies = new PriorityQueue<Tile>(1, new Comparator<Tile>() {
+                    public int compare(Tile a, Tile b) {
+                        return ant.getDistance(a) - ant.getDistance(b);
+                    }
+                });
+                closestEnemies.addAll(ant.enemiesNearby());
+                final Tile closestEnemy = closestEnemies.peek();
+                PriorityQueue<Ant> closestAllies = new PriorityQueue<Ant>(1, new Comparator<Ant>() {
+                    public int compare(Ant a, Ant b) {
+                        return a.getDistance(closestEnemy) - b.getDistance(closestEnemy);
+                    }
+                });
+                closestAllies.addAll(ant.alliesNearby());
+                closestAllies.add(ant);
+                if (closestAllies.size() > 2) {
+                    for (Ant ally : closestAllies) {
+                        ally.setGoal(closestEnemy);
+                    }
+                } 
+            }
+        }
     }
 
     public void findFood() {
@@ -182,7 +203,7 @@ public class MyBot extends Bot {
         if ( unclaimedFood.size() == 0 ) { return; }
         ArrayList<Ant> closeAnts = new ArrayList<Ant>();
         for (Ant ant : myAnts) {
-            if (ant.goal == null && (ant.isIdle() || ant.isExploring())) {
+            if (ant.goal == null || ant.isExploring()) {
                 ArrayList<Tile> closestFood = ant.distanceSort(unclaimedFood);
                 for (Tile food : unclaimedFood) {
                     if (ant.getVision().contains(food)) {
@@ -199,12 +220,7 @@ public class MyBot extends Bot {
     public void exploreMap() {
         for (Ant ant : myAnts) {
             if (ant.goal == null && ant.isIdle()) {
-                for (Tile target : ant.explorationTargets()) {
-                    if (ant.setGoal(target)) {
-                        ant.exploring = true;
-                        break;
-                    }
-                }
+                ant.breadthFirstExplore();
             }
         }
         //Logger.getAnonymousLogger().warning("elapsed time after exploring base: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
@@ -236,8 +252,8 @@ public class MyBot extends Bot {
                 LinkedList<Integer> aDistances = new LinkedList<Integer>();
                 LinkedList<Integer> bDistances = new LinkedList<Integer>();
                 for (Ant ant : idleMap.values()) {
-                        aDistances.add(new Integer(getAnts().getDistance(a.position, ant.position)));
-                        bDistances.add(new Integer(getAnts().getDistance(b.position, ant.position)));
+                    aDistances.add(new Integer(getAnts().getDistance(a.position, ant.position)));
+                    bDistances.add(new Integer(getAnts().getDistance(b.position, ant.position)));
                 }
                 Collections.sort(aDistances);
                 Collections.sort(bDistances);
@@ -279,6 +295,7 @@ public class MyBot extends Bot {
                 LinkedList<Tile> thePath = path.retracePath();
                 Collections.reverse(thePath);
                 ant.setGoal(thePath);
+                ant.exploring = false;
                 idleMap.remove(path.position);
                 if (idleMap.keySet().size() == 0) {
                     return;
@@ -324,8 +341,8 @@ public class MyBot extends Bot {
                 LinkedList<Integer> aDistances = new LinkedList<Integer>();
                 LinkedList<Integer> bDistances = new LinkedList<Integer>();
                 for (Ant ant : idleMap.values()) {
-                        aDistances.add(new Integer(getAnts().getDistance(a.position, ant.position)));
-                        bDistances.add(new Integer(getAnts().getDistance(b.position, ant.position)));
+                    aDistances.add(new Integer(getAnts().getDistance(a.position, ant.position)));
+                    bDistances.add(new Integer(getAnts().getDistance(b.position, ant.position)));
                 }
                 Collections.sort(aDistances);
                 Collections.sort(bDistances);
@@ -362,6 +379,7 @@ public class MyBot extends Bot {
                 LinkedList<Tile> thePath = path.retracePath();
                 Collections.reverse(thePath);
                 ant.setGoal(thePath);
+                ant.exploring = false;
                 return;
             }
 
@@ -385,6 +403,7 @@ public class MyBot extends Bot {
         Ants ants = getAnts();
         clearTargetNodeGrid();
         clearAntNodeGrid();
+        Ant.updateNodeGrid(ants);
 
         // remove dead ants
         ArrayList<Ant> oldAnts = new ArrayList<Ant>(myAnts);
@@ -392,6 +411,7 @@ public class MyBot extends Bot {
         for (Ant ant : oldAnts) {
             if (!ants.getMyAnts().contains(ant.position)) { // ant has died
                 myAnts.remove(ant);
+                Ant.reserved.remove(ant.position);
             } else {
                 antPositions.add(ant.position);
             }
@@ -445,18 +465,20 @@ public class MyBot extends Bot {
         // move ants away from the base
         for (Ant ant : myAnts) {
             if (ants.getMyHills().contains(ant.position)) {
-                ant.moveAwayFromBase();
+                if (!ant.initialMovePreferred()) {
+                    ant.moveAwayFromBase();
+                }
             }
         }
-        
+
 
         //Logger.getAnonymousLogger().warning("elapsed time after moving ants off the base: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
 
         // assign goals
         attackEnemyHills();
         findFood();
-        //attackEnemyAnts();
-        //exploreMap();
+        attackEnemyAnts();
+        exploreMap();
 
         // move ants
         for (Ant ant : myAnts) {

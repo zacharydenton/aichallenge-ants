@@ -26,6 +26,7 @@ public class Ants {
 
 	public boolean[][] visionMatrix;
 	public ArrayList<int[]> visionOffsets2;
+	public ArrayList<int[]> attackOffsets2;
 
 	private long turnStartTime;
 
@@ -78,6 +79,17 @@ public class Ants {
 				int d = dRow*dRow + dCol*dCol;
 				if (d <= this.viewRadius2) {
 					this.visionOffsets2.add(new int[] {dRow % getRows() - getRows(), dCol % getCols() - getCols()});
+				}
+			}
+		}
+
+        int ar = (int)Math.floor(Math.sqrt(this.viewRadius2));
+		this.attackOffsets2 = new ArrayList<int[]>();
+		for (int dRow = -ar; dRow <= ar; dRow++) {
+			for (int dCol = -ar; dCol <= ar; dCol++) {
+				int d = dRow*dRow + dCol*dCol;
+				if (d <= this.attackRadius2) {
+					this.attackOffsets2.add(new int[] {dRow % getRows() - getRows(), dCol % getCols() - getCols()});
 				}
 			}
 		}
@@ -455,5 +467,9 @@ public class Ants {
 
     public ArrayList<int[]> getVisionOffsets() {
         return visionOffsets2;
+    }
+
+    public ArrayList<int[]> getAttackOffsets() {
+        return attackOffsets2;
     }
 }
