@@ -185,10 +185,10 @@ public class MyBot extends Bot {
                         return a.getDistance(closestEnemy) - b.getDistance(closestEnemy);
                     }
                 });
-                closestAllies.addAll(ant.alliesNearby());
+                closestAllies.addAll(ant.alliesInSight());
                 closestAllies.add(ant);
-                if (closestAllies.size() > 2) {
-                    for (Ant ally : closestAllies) {
+                for (Ant ally : closestAllies) {
+                    if (ally.goal == null || ally.isExploring()) {
                         ally.setGoal(closestEnemy);
                     }
                 }

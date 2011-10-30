@@ -110,18 +110,23 @@ public class Ant {
 
     public Set<Ant> alliesNearby() {
         Set<Ant> closeAllies = new HashSet<Ant>();
-        /*
-           Set<Tile> closeAllyTiles = new HashSet<Tile>(ants.getMyAnts());
-           closeAllyTiles.retainAll(getAttackable());
-           for (Tile ally : closeAllyTiles) {
-           closeAllies.add(bot.antMap.get(ally));
-           }
-           */
-        List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
-        for (Aim direction : directions) {
-            Tile pos = ants.getTile(this.position, direction);
-            if (bot.antMap.containsKey(pos)) {
-                closeAllies.add(bot.antMap.get(pos));
+        Set<Tile> closeAllyTiles = new HashSet<Tile>(ants.getMyAnts());
+        closeAllyTiles.retainAll(getAttackable());
+        for (Tile ally : closeAllyTiles) {
+            if (!ally.equals(this.position)) { 
+                closeAllies.add(bot.antMap.get(ally));
+            }
+        }
+        return closeAllies;
+    }
+
+    public Set<Ant> alliesInSight() {
+        Set<Ant> closeAllies = new HashSet<Ant>();
+        Set<Tile> closeAllyTiles = new HashSet<Tile>(ants.getMyAnts());
+        closeAllyTiles.retainAll(getVision());
+        for (Tile ally : closeAllyTiles) {
+            if (!ally.equals(this.position)) { 
+                closeAllies.add(bot.antMap.get(ally));
             }
         }
         return closeAllies;
@@ -153,8 +158,6 @@ public class Ant {
                     } else {
                         clearGoal();
                     }
-                } else if (this.move(this.goal)) {
-                    clearGoal();
                 } else {
                     // couldn't move on path
                     clearGoal();
