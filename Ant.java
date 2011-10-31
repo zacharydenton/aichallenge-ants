@@ -544,9 +544,15 @@ public class Ant {
             public int compare(Node a, Node b) {
                 int distA = 0;
                 int distB = 0;
-                if (Ant.this.closestUnseen != null) {
+                if (bot.enemyHills.size() > 0) {
+                    Tile closestHill = Ant.this.distanceSort(bot.enemyHills).peek();
+                    distA = Ant.this.ants.getDistance(a.position, closestHill);
+                    distB = Ant.this.ants.getDistance(b.position, closestHill);
+                /*
+                } else if (Ant.this.closestUnseen != null) {
                     distA = Ant.this.ants.getDistance(a.position, Ant.this.closestUnseen);
-                    distB = Ant.this.ants.getDistance(a.position, Ant.this.closestUnseen);
+                    distB = Ant.this.ants.getDistance(b.position, Ant.this.closestUnseen);
+                */
                 }
                 return (distA + a.length()) - (distB + b.length());
             }
