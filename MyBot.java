@@ -158,7 +158,8 @@ public class MyBot extends Bot {
         for (Ant ant : myAnts) {
             PriorityQueue<Tile> closestHills = ant.distanceSort(enemyHills);
             Tile hill = closestHills.peek();
-            if (ant.goal == null || !ant.goal.equals(hill)) {
+            //if (ant.goal == null || !ant.goal.equals(hill)) {
+            if (ant.goal == null || ant.isExploring()) {
                 if (ant.getDistance(hill) < 300) {
                     closeAnts.add(ant);
                 } else {
@@ -483,8 +484,8 @@ public class MyBot extends Bot {
         //Logger.getAnonymousLogger().warning("elapsed time after moving ants off the base: " + (System.nanoTime() - startTime) / 1000000000.0f + " seconds");
 
         // assign goals
-        attackEnemyHills();
         findFood();
+        attackEnemyHills();
         attackEnemyAnts();
         exploreMap();
 

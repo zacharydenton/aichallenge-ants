@@ -98,7 +98,7 @@ public class Ant {
     public boolean move(Tile destination) {
         if (ants.getIlk(destination).isPassable()) {
             List<Aim> directions = ants.getDirections(this.position, destination);
-            Collections.shuffle(directions);
+            //Collections.shuffle(directions);
             for (Aim direction : directions) {
                 if (this.move(direction)) {
                     return true;
@@ -395,6 +395,7 @@ public class Ant {
     }
 
     public boolean initialMovePreferred() {
+        /*
         List<Aim> directions = new ArrayList<Aim>(EnumSet.allOf(Aim.class));
         for (Aim direction : preferredDirections) {
             Tile destination = ants.getTile(this.position, direction);
@@ -412,6 +413,13 @@ public class Ant {
             }
         }
         return false;
+        */
+        Tile closestFood = distanceSort(ants.getFoodTiles()).peek();
+        if (closestFood != null) {
+            return this.move(closestFood);
+        } else {
+            return false;
+        }
     }
 
     public void exploreArea() {
@@ -544,16 +552,16 @@ public class Ant {
             public int compare(Node a, Node b) {
                 int distA = 0;
                 int distB = 0;
-                if (bot.enemyHills.size() > 0) {
-                    Tile closestHill = Ant.this.distanceSort(bot.enemyHills).peek();
-                    distA = Ant.this.ants.getDistance(a.position, closestHill);
-                    distB = Ant.this.ants.getDistance(b.position, closestHill);
                 /*
+                if (Ant.this.ants.getFoodTiles().size() > 0) {
+                    Tile closestFood = Ant.this.distanceSort(Ant.this.ants.getFoodTiles()).peek();
+                    distA = Ant.this.ants.getDistance(a.position, closestFood);
+                    distB = Ant.this.ants.getDistance(b.position, closestFood);
                 } else if (Ant.this.closestUnseen != null) {
                     distA = Ant.this.ants.getDistance(a.position, Ant.this.closestUnseen);
                     distB = Ant.this.ants.getDistance(b.position, Ant.this.closestUnseen);
-                */
                 }
+                */
                 return (distA + a.length()) - (distB + b.length());
             }
         });
